@@ -282,6 +282,7 @@ body {
     padding: 5px 10px;
     width: 100%;
     max-width: 500px;
+    background-color: var(--color-white);
 }
 
 /*  The Input: Needs extra space on the right */
@@ -292,7 +293,7 @@ body {
     padding: 12px 20px;
     font-size: 16px;
     outline: none;
-    background-color: var(--color-background);
+
 }
 
 /*  The Button: Floats on the right side */
