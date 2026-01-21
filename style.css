@@ -145,9 +145,6 @@ body {
     align-content: center;
     position: relative;
     text-align: center;
-    /* Centers text horizontally */
-
-    /* REQUIRED: Ensures content is horizontally centered */
 }
 
 .hero-section .hero-image {
@@ -157,19 +154,18 @@ body {
     top: 0;
     left: 0;
     transform: none;
-
     z-index: 1;
     object-fit: cover;
     pointer-events: none;
 }
 
+/* for shape img */
 .hero-section .hero-image img,
 .partner-shape img,
 .review-shape img {
     position: absolute;
     display: block;
     max-width: none;
-    /* prevent SVGs being constrained by container width */
     height: auto;
 }
 
@@ -275,63 +271,47 @@ body {
     font-size: 16px;
 }
 
-/* 1. The Container: Keeps the button locked inside */
+/* Keeps the button locked inside */
 .input-wrapper {
-
     align-items: center;
-
     margin: auto;
     justify-items: center;
     text-align: center;
     display: flex;
-
     border-radius: 50px;
-
     padding: 5px 10px;
-
     width: 100%;
-
     max-width: 500px;
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* 2. The Input: Needs extra space on the right */
+/*  The Input: Needs extra space on the right */
 .hero-input {
     margin: auto;
     border: none;
     width: 80%;
     padding: 12px 20px;
     font-size: 16px;
-    color: #333;
     outline: none;
     background-color: var(--color-background);
-
 }
 
-/* 3. The Button: Floats on the right side */
+/*  The Button: Floats on the right side */
 .join-button {
-
     align-items: center;
-    /* Space between icon and text */
     background: var(--color-primary);
-    /* No background color */
     border: none;
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
     font-family: var(--font-secondary);
     color: var(--color-text-primary);
-    /* Dark grey text */
     padding: 12px 32px;
     border-radius: 24px;
-
 }
 
 .join-button:hover {
     background-color: var(--color-primary);
-    /* Yellow on hover */
-    color: black;
+    color: var(--color-black);
 }
 
 .hero-section .hero-title,
@@ -341,20 +321,18 @@ body {
     z-index: 2;
 }
 
-
+/* partner section */
 
 .partner-section {
-    /* padding: 64px 72px; */
     width: 100%;
     height: 100%;
-
     position: relative;
     z-index: 1;
-
     font-family: var(--font-secondary);
     color: var(--color-text-primary);
 }
 
+/* partner shape  */
 .partner-shape {
     width: 100%;
     height: 100%;
@@ -372,7 +350,7 @@ body {
 }
 
 .partner-shape .line {
-    top: 20%;
+    top: 23%;
     left: 48%;
     height: auto;
     width: auto;
@@ -407,6 +385,7 @@ body {
     height: 100%;
 }
 
+/* left side */
 .partner-left {
     padding-left: 104px;
     align-items: center;
@@ -430,24 +409,18 @@ body {
     max-width: 520px;
 }
 
-/* right list: horizontal cards, scrollable on narrow screens */
+/* right list: horizontal cards, scrollable on narrow screens  */
 .partner-list {
-
-    /* width: 100%;  <-- REMOVE THIS to let right:0 constrain it */
     position: absolute;
     top: 45%;
     left: 55%;
     right: 0;
-
     display: flex;
     gap: 20px;
-
     overflow-x: auto;
-    /* Restore scrolling */
     padding-bottom: 6px;
 
 }
-
 
 
 /* individual partner card */
@@ -485,7 +458,7 @@ body {
 }
 
 
-/* content inside card */
+/* partner content inside card */
 
 .partner-year {
     font-weight: 700;
@@ -499,10 +472,11 @@ body {
     font-weight: 400;
 
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.8);
+    color: var(--color-text-primary);
     text-align: justify;
 }
 
+/* partner card responsive */
 @media (max-width: 1200px) {
     .partner-section .partner-card {
 
@@ -533,6 +507,7 @@ body {
     left: 50%;
 }
 
+/* how we work section */
 .how-work-section {
     margin-top: 50px;
     padding: 64px 0px;
@@ -662,7 +637,7 @@ body {
     height: auto;
 }
 
-
+/* review section */
 .review-section {
     justify-content: center;
     height: 100%;
@@ -682,16 +657,27 @@ body {
 }
 
 .review-section .review-title {
+
     font-size: 56px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+
+}
+
+
+.review-section .review-title img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px;
+    height: 1.05em;
+    width: auto;
 }
 
 .review-shape .vector1 {
     width: auto;
     height: auto;
     z-index: -1;
-    top: 13%;
+    top: 11%;
     left: 25%;
 
 }
@@ -700,7 +686,7 @@ body {
     width: auto;
     height: auto;
     z-index: -1;
-    top: 21%;
+    top: 20%;
     left: 23%;
 }
 
@@ -820,6 +806,8 @@ body {
     color: var(--color-text-primary);
 }
 
+
+
 .client-review {
     margin: 0;
     font-size: 20px;
@@ -828,6 +816,7 @@ body {
     opacity: 0.9;
 }
 
+/* charity section */
 .charity-section {
 
     display: flex;
@@ -933,10 +922,9 @@ body {
     margin: 0 auto 100px;
     display: flex;
     align-items: center;
-    background-color: #fff;
     border-radius: 100px;
     padding: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-white);
 }
 
 .footer-input {
@@ -946,15 +934,12 @@ body {
     padding: 15px 25px;
     font-size: 16px;
     border-radius: 100px;
-    color: #333;
+    color: var(--color-text-primary);
 }
 
-.footer-input::placeholder {
-    color: #ccc;
-}
 
 .footer-join-btn {
-    background-color: #FF60E6;
+    background-color: var(--color-primary);
     color: #000;
     border: none;
     padding: 12px 35px;
@@ -966,7 +951,7 @@ body {
 }
 
 .footer-join-btn:hover {
-    background-color: #ff40e0;
+    background-color: var(--color-primary)
 }
 
 /* Footer Bottom */
@@ -986,7 +971,7 @@ body {
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    color: #1F392C;
+    color: var(--color-text-primary);
 }
 
 .footer-nav {
@@ -1032,6 +1017,44 @@ body {
     }
 }
 
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: transparent;
+
+    transform: translateY(-5px);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+}
 
 
 /* animaton  */
